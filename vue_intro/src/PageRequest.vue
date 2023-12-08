@@ -1,0 +1,25 @@
+<template>
+    <div>
+        <h1>Première requête</h1>
+
+        <v-btn @click="load">Load</v-btn>
+
+    </div>
+</template>
+  
+<script setup>
+import { ref } from 'vue'
+import axios from 'axios'
+
+const data = ref()
+
+function load() {
+    axios.get('http://127.0.0.1:3000/api/test')
+        .then(response => {
+            console.log(response.data);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}
+</script>
