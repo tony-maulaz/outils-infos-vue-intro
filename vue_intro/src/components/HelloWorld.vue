@@ -10,13 +10,18 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 defineProps({
   msg: String,
 })
 
 const count = ref(0)
+
+watch(count, (newValue, oldValue) => {
+  console.log('count changed from', oldValue, 'to', newValue)
+})
+
 </script>
 
 <style scoped>

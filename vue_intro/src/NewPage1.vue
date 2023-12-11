@@ -14,7 +14,7 @@
   
   <script setup>
   import { ref } from 'vue'
-
+  
   const textEnter = ref('text initial')
   const newText = ref('')
 

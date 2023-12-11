@@ -26,20 +26,19 @@
 - Aller dans le dossier du projet : `cd <nom_du_projet>`
 - Initialiser le projet : `npm install`
 
-## Pour développer
+
+## Pour développer le graphique avec Vue
 - Une fois dans le conteneur web
-- Démarrer le serveur avec le mode de watch : `npm run dev`
-- Accéder au site : `http://localhost:3000/`
+- Aller dans le dossier du projet : `cd <nom_du_projet>`
+- Initialiser le projet : `npm install`
+- Démarrer le serveur avec le mode de watch : `npm run dev` ou `npm run start`
+- Accéder au site : `http://localhost:8000/`
 
 
-
-## Démarrer le serveur
-- Démarrer le serveur avec le mode de watch : `npm run dev`
-- Démarrer le serveur en mode normal : `npm run start`
 
 
 # API (serveur experess)
-## Pour utiliser l'api (A faire une seule fois)
+## Pour utiliser l'api
 - Ouvrir un autre terminal
 - Se connecter au conteneur web : `docker exec -it vue_intro bash`
 - Aller dans le dossier du serveur express : `cd express`

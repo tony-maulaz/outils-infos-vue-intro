@@ -16,7 +16,9 @@ const data = ref()
 function load() {
     axios.get('http://127.0.0.1:3000/api/test')
         .then(response => {
-            console.log(response.data);
+            const data = response.data
+            console.log(data);
+            console.log(data.name)
         })
         .catch(error => {
             console.error(error);

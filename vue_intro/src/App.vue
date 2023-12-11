@@ -8,7 +8,7 @@
     </a>
     <img src="./assets/monimage.png" alt="Vue logo" style="width: 100px;"/>
   </div>
-  <div id="div_link">
+  <div id="div_link" class="mb-4">
     <router-link to="/">Home</router-link>
     <router-link to="/test">Comp</router-link>
     <router-link to="/test2">IF et FOR</router-link>
