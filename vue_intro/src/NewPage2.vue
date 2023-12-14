@@ -3,7 +3,7 @@
       <h1 class="test">Nouvelle Page avec un composant</h1>
 
       <HelloWorld msg="Vite + Vue" />
-      
+
       <router-link to="/">Aller à la page entrée</router-link>
     </div>
   </template>

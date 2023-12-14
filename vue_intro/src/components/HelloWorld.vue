@@ -1,4 +1,5 @@
 <template>
+  <h2>Hello</h2>
   <h1>{{ msg }}</h1>
 
   <div class="card">
@@ -12,8 +13,24 @@
 <script setup>
 import { ref, watch } from 'vue'
 
+/*const props ={
+  msg: {
+    type: String,
+    default: 'Hello World!',
+    validator (value) {
+      return value.length > 0
+    }
+  }
+}*/
+
 defineProps({
-  msg: String,
+  msg: {
+    type: String,
+    default: 'Hello World!',
+    validator (value) {
+      return value.length > 4
+    }
+  }
 })
 
 const count = ref(0)
