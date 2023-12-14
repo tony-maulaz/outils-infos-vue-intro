@@ -3,7 +3,7 @@
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <v-btn type="button" @click="count++">count is {{ count }}</v-btn>
+    <v-btn type="button" @click="increment">count is {{ count }}</v-btn>
     <p>
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
@@ -13,15 +13,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 
-/*const props ={
-  msg: {
-    type: String,
-    default: 'Hello World!',
-    validator (value) {
-      return value.length > 0
-    }
-  }
-}*/
+const emit = defineEmits(['myEvent'])
 
 defineProps({
   msg: {
@@ -39,6 +31,10 @@ watch(count, (newValue, oldValue) => {
   console.log('count changed from', oldValue, 'to', newValue)
 })
 
+function increment () {
+  count.value++
+  if( count.value > 5 ) emit('myEvent', count.value)
+}
 </script>
 
 <style scoped>
